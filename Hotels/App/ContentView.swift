@@ -21,9 +21,7 @@ struct ContentView: View {
             [
                 NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18, weight: .medium)]
         }
-           
         .environmentObject(appCoordinator)
-        
     }
 }
 

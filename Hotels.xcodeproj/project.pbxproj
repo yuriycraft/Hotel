@@ -236,7 +236,6 @@
 		631A30D22B4FE7C600A68AD9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				633F3D2D2B550F9200F3439D /* Fonts */,
 				631A30A82B4FE74100A68AD9 /* Assets.xcassets */,
 				631A30AA2B4FE74100A68AD9 /* Preview Content */,
 				635FE8A22B67047100B21853 /* Constants.swift */,
@@ -319,13 +318,6 @@
 				633413AB2B51908D00135201 /* RoomsView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		633F3D2D2B550F9200F3439D /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 		635FE8892B6572C700B21853 /* ViewModel */ = {
@@ -420,7 +412,6 @@
 				631A309D2B4FE73F00A68AD9 /* Sources */,
 				631A309E2B4FE73F00A68AD9 /* Frameworks */,
 				631A309F2B4FE73F00A68AD9 /* Resources */,
-				635FE8B52B67DB5100B21853 /* RunSwiftLint */,
 			);
 			buildRules = (
 			);
@@ -511,28 +502,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		635FE8B52B67DB5100B21853 /* RunSwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = RunSwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint and if you are using not ARM mac remove path from script\"\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		631A309D2B4FE73F00A68AD9 /* Sources */ = {
