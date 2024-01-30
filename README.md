@@ -1,6 +1,7 @@
 # Прототип мобильного приложения для туристического бронирования
+# Прототип мобильного приложения для туристического бронирования
 
-![Превью приложения](https://github.com/yuriycraft/Hotel/blob/main/Simulator%20Screen%20Recording%20-%20iPhone%2015%20Pro%20-%202024-01-30%20at%2015.36.15.gif)
+<img src="https://github.com/yuriycraft/Hotel/blob/main/Simulator%20Screen%20Recording%20-%20iPhone%2015%20Pro%20-%202024-01-30%20at%2015.36.15.gif" alt="Превью приложения" height="500" /> <img src="https://github.com/yuriycraft/Hotel/blob/main/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-01-30%20at%2015.19.33.png" alt="Превью приложения" height="500" /> <img src="https://github.com/yuriycraft/Hotel/blob/main/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-01-30%20at%2015.19.41.png" alt="Превью приложения" height="500" /> <img src="https://github.com/yuriycraft/Hotel/blob/main/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-01-30%20at%2015.19.51.png" alt="Превью приложения" height="500" />
 
 ## Структура приложения
 
