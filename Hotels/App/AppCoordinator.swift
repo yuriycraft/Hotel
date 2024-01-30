@@ -37,6 +37,7 @@ final class AppCoordinator: ObservableObject {
     
     private func popToRoot() {
         path.removeLast(path.count)
+        self.cancellables.removeAll()
     }
 
     // MARK: Flow Coordinator Bindings
