@@ -35,7 +35,10 @@ struct OrderView: View {
                 .font(FontConstants.font16)
                 .foregroundColor(ColorConstants.primaryText)
                 .multilineTextAlignment(.center)
-                .padding()
+                .padding(EdgeInsets(top: LayoutConstants.padding20,
+                                    leading: LayoutConstants.padding23,
+                                    bottom: LayoutConstants.padding20,
+                                    trailing: LayoutConstants.padding23))
         }
         Spacer()
         

@@ -83,6 +83,8 @@ enum LayoutConstants {
     static let padding5: CGFloat = 5.0
     static let padding2: CGFloat = 2.0
     static let padding10: CGFloat = 10.0
+    static let padding20: CGFloat = 20.0
+    static let padding23: CGFloat = 23.0
     static let padding32: CGFloat = 32.0
     static let cornerRadius5: CGFloat = 5.0
     static let cornerRadius10: CGFloat = 10.0

@@ -31,6 +31,7 @@ struct BuyerInfoView: View {
                 ValidatedTextField(text: $viewModel.email,
                                    title: emailTitle,
                                    keyboarType: .emailAddress,
+                                   autocapitalization: .none,
                                    isValid: $viewModel.isEmailValid) { _ in
                     viewModel.validateEmail()
                     return viewModel.isEmailValid

@@ -39,12 +39,14 @@ struct TouristInformationView: View {
 
             ValidatedTextField(text: $viewModel.passNumber,
                                title: viewModel.passNumberTitle,
+                               keyboarType: .numberPad,
                                isValid: $viewModel.isPassNumberValid) { text in
                 viewModel.validateText(text)
             }
 
             ValidatedTextField(text: $viewModel.passExpirationDate,
                                title: viewModel.passExpirationDateTitle,
+                               keyboarType: .numberPad,
                                isValid: $viewModel.isPassExpirationDateValid) { text in
                 viewModel.validateText(text)
             }

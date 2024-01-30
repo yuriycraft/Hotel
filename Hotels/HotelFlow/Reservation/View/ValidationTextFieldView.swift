@@ -11,6 +11,7 @@ struct ValidatedTextField: View {
     @Binding var text: String
     var title: String
     var keyboarType: UIKeyboardType = .default
+    var autocapitalization: UITextAutocapitalizationType = .words
     @Binding var isValid: Bool
     var validation: (String) -> Bool
 
@@ -29,6 +30,8 @@ struct ValidatedTextField: View {
                 TextField(title, text: $text)
                     .foregroundColor(.black)
                     .font(.custom(CustomFont.name, size: !text.isEmpty ? CustomFont.sizeRegular : CustomFont.sizeLarge))
+                    .disableAutocorrection(true)
+                    .autocapitalization(autocapitalization)
                     .keyboardType(keyboarType)
                     .focused($isTextFieldFocused)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -109,6 +112,7 @@ struct ValidatedPhoneField: View {
                                        alignment: .leading)
                                 .font(.custom(CustomFont.name, size: phoneNumber.isEmpty ? CustomFont.sizeRegular : CustomFont.sizeLarge))
                                 .foregroundColor(ColorConstants.textBlack)
+                                .keyboardType(.phonePad)
                                 .multilineTextAlignment(.leading)
                                 .focused($isTextFieldFocused)
                                 .onChange(of: phoneNumber) { newText in
