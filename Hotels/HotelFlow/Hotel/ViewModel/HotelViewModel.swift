@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class HotelViewModel: ObservableObject {
+final class HotelViewModel: ObservableObject {
 
     @Published var hotel: Hotel? {
         didSet {

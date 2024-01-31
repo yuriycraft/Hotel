@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class HotelPriceViewModel: ObservableObject {
+final class HotelPriceViewModel: ObservableObject {
     let id: Int
     let hotelName: String
     let hotelAddress: String

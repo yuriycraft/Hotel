@@ -7,7 +7,7 @@
 
 import Foundation
 
-class OrderViewModel: ObservableObject {
+final class OrderViewModel: ObservableObject {
     var buttonText: String {
         StringConstants.superTitle
     }

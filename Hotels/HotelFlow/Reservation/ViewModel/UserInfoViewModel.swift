@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class UserInfoViewModel: ObservableObject, Hashable {
+final class UserInfoViewModel: ObservableObject, Hashable {
     static func == (lhs: UserInfoViewModel, rhs: UserInfoViewModel) -> Bool {
         lhs.sectionTitle == rhs.sectionTitle
        }

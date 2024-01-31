@@ -28,7 +28,7 @@ enum TouristSectionTitle: String, CaseIterable {
     }
 }
 
-class ReservationViewModel: ObservableObject {
+final class ReservationViewModel: ObservableObject {
     @Published var hotelPriceVM: HotelPriceViewModel? {
         didSet {
             objectWillChange.send()

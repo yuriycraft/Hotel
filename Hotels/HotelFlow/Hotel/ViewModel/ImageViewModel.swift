@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ImageViewModel: ObservableObject {
+final class ImageViewModel: ObservableObject {
     @Published var image: UIImage?
     @Published var isLoading = false
     @Published var isError = false

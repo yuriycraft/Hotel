@@ -6,7 +6,7 @@
 //
 import XCTest
 
-class RoomsTests: XCTestCase {
+final class RoomsTests: XCTestCase {
 
     func testRoomsDecoding() {
         // Test Case 1 - Valid JSON with all fields

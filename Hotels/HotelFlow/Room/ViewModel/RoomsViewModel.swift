@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class RoomsViewModel: ObservableObject {
+final class RoomsViewModel: ObservableObject {
     private var rooms: Rooms?
     @Published var roomCellData: [RoomCellData] = []
     

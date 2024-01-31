@@ -7,7 +7,7 @@
 
 import XCTest
 
-class HotelModel: XCTestCase {
+final class HotelModel: XCTestCase {
     // swiftlint:disable function_body_length
     func testHotelDecoding() {
         // Test Case 1
