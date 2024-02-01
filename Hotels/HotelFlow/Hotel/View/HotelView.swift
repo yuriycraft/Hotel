@@ -11,19 +11,18 @@ import SwiftUI
 struct HotelView: View {
     @ObservedObject var viewModel: HotelViewModel
     let didClickMenuItem = PassthroughSubject<String, Never>()
-    
-    var body: some View {
 
+    var body: some View {
         let header = Color.clear
             .frame(height: LayoutConstants.padding8)
             .listRowInsets(EdgeInsets())
-        
+
         List {
             SectionWithoutInsets {
                 HotelHeaderView(viewModel: viewModel)
             }
             .listSectionSeparator(.hidden)
-            
+
             Section(header: header) {
                 HotelInfoView(viewModel: viewModel)
             }
@@ -31,7 +30,7 @@ struct HotelView: View {
         }
         .listStyle(.grouped)
         .environment(\.defaultMinListHeaderHeight, 0.1)
-        
+
         CustomButton(text: StringConstants.goToSelectRoom) {
             didClickMenuItem.send(viewModel.hotelName)
         }
@@ -39,5 +38,8 @@ struct HotelView: View {
                             leading: LayoutConstants.padding16,
                             bottom: 0,
                             trailing: LayoutConstants.padding16))
+        .onAppear {
+            viewModel.loadDataFromNetwork()
+        }
     }
 }

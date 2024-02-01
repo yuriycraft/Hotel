@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct CustomDisclosureGroup<Prompt: View,
-    ExpandedView: View>: View {
+    ExpandedView: View>: View
+{
     @Binding var isExpanded: Bool
     var animation: Animation?
 
@@ -18,7 +19,8 @@ struct CustomDisclosureGroup<Prompt: View,
     init(animation: Animation?,
          isExpanded: Binding<Bool>,
          prompt: () -> Prompt,
-         expandedView: () -> ExpandedView) {
+         expandedView: () -> ExpandedView)
+    {
         self._isExpanded = isExpanded
         self.animation = animation
         self.prompt = prompt()
@@ -30,7 +32,6 @@ struct CustomDisclosureGroup<Prompt: View,
             HStack {
                 prompt
             }
-        
             if isExpanded {
                 expandedView
             }

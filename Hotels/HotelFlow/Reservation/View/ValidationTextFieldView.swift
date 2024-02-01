@@ -10,7 +10,7 @@ struct ValidatedTextField: View {
     @FocusState private var isTextFieldFocused: Bool
     @Binding var text: String
     var title: String
-    var keyboarType: UIKeyboardType = .default
+    var keyboarType: UIKeyboardType = .alphabet
     var autocapitalization: UITextAutocapitalizationType = .words
     @Binding var isValid: Bool
     var validation: (String) -> Bool
@@ -35,12 +35,16 @@ struct ValidatedTextField: View {
                     .keyboardType(keyboarType)
                     .focused($isTextFieldFocused)
                     .frame(maxWidth: .infinity, alignment: .leading)
+                    .frame(maxHeight: 18)
                     .onChange(of: isTextFieldFocused,
                               perform: { isFocused in
-                        if !isFocused {
-                            isValid = validation(text)
-                        }
-                    })
+                                  if !isFocused {
+                                      isValid = validation(text)
+                                  }
+                              })
+                    .toolbar {
+                        HStack {}.frame(width: 0, height: 0)
+                    }
             }
         }
         .padding(EdgeInsets(top: !text.isEmpty ? VerticalPadding.small : VerticalPadding.large,
@@ -95,14 +99,14 @@ struct ValidatedPhoneField: View {
                         .padding(.trailing, 2)
                         .font(.custom(CustomFont.name,
                                       size: phoneNumber.isEmpty
-                                      ? CustomFont.sizeRegular : CustomFont.sizeLarge))
+                                          ? CustomFont.sizeRegular : CustomFont.sizeLarge))
                         .opacity(isTextFieldFocused || phoneNumber.count > 0 ? 1 : 0)
                     Text(replaceWithAsterisks())
 
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .font(.custom(CustomFont.name,
                                       size: !phoneNumber.isEmpty
-                                      ? CustomFont.sizeRegular : CustomFont.sizeLarge))
+                                          ? CustomFont.sizeRegular : CustomFont.sizeLarge))
                         .tracking(3.5)
                         .multilineTextAlignment(.leading)
                         .opacity(isTextFieldFocused || phoneNumber.count > 0 ? 1 : 0)
@@ -113,6 +117,7 @@ struct ValidatedPhoneField: View {
                                 .font(.custom(CustomFont.name, size: phoneNumber.isEmpty ? CustomFont.sizeRegular : CustomFont.sizeLarge))
                                 .foregroundColor(ColorConstants.textBlack)
                                 .keyboardType(.phonePad)
+                                .disableAutocorrection(true)
                                 .multilineTextAlignment(.leading)
                                 .focused($isTextFieldFocused)
                                 .onChange(of: phoneNumber) { newText in
@@ -124,6 +129,8 @@ struct ValidatedPhoneField: View {
                                         isValid = validation(phoneNumber)
                                     }
                                 })
+
+                                .scrollDismissesKeyboard(.interactively)
                                 .padding(EdgeInsets())
                         )
                 }
@@ -153,7 +160,8 @@ struct ValidatedPhoneField: View {
                 || char == ")"
                 || char == "-"
                 || char == " ")
-                && index < phoneNumber.count {
+                && index < phoneNumber.count
+            {
                 result.append(" ")
                 index += 1
             } else {

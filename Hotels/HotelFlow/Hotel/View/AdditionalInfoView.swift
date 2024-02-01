@@ -4,13 +4,12 @@
 //
 //  Created by Lol Kek on 15/01/2024.
 //
+
 import SwiftUI
 struct TagView: View {
     var tags: [String]
 
-    @State private var totalHeight
-          = CGFloat.zero       // << variant for ScrollView/List
-       // = CGFloat.infinity   // << variant for VStack
+    @State private var totalHeight = CGFloat.zero
 
     var body: some View {
         VStack {
@@ -18,11 +17,10 @@ struct TagView: View {
                 self.generateContent(in: geometry)
             }
         }
-        .frame(height: totalHeight)// << variant for ScrollView/List
-      //  .frame(maxHeight: totalHeight) // << variant for VStack
+        .frame(height: totalHeight)
     }
 
-    private func generateContent(in g: GeometryProxy) -> some View {
+    private func generateContent(in gProxy: GeometryProxy) -> some View {
         var width = CGFloat.zero
         var height = CGFloat.zero
 
@@ -31,23 +29,23 @@ struct TagView: View {
                 self.item(for: tag)
                     .padding(.horizontal, 4)
                     .padding(.vertical, 4)
-                    .alignmentGuide(.leading, computeValue: { d in
-                        if abs(width - d.width) > g.size.width {
+                    .alignmentGuide(.leading, computeValue: { value in
+                        if abs(width - value.width) > gProxy.size.width {
                             width = 0
-                            height -= d.height
+                            height -= value.height
                         }
                         let result = width
                         if tag == self.tags.last! {
-                            width = 0 // last item
+                            width = 0
                         } else {
-                            width -=   d.width
+                            width -= value.width
                         }
                         return result
                     })
                     .alignmentGuide(.top, computeValue: { _ in
                         let result = height
                         if tag == self.tags.last! {
-                            height = 0 // last item
+                            height = 0
                         }
                         return result
                     })
@@ -56,15 +54,15 @@ struct TagView: View {
     }
 
     private func item(for text: String) -> some View {
-          Text(text)
+        Text(text)
             .font(FontConstants.font16Medium)
             .foregroundColor(ColorConstants.primaryText)
-        .padding(EdgeInsets(top: LayoutConstants.padding5,
-                            leading: LayoutConstants.padding10,
-                            bottom: LayoutConstants.padding5,
-                            trailing: LayoutConstants.padding10))
-        .background(ColorConstants.additionalBackground)
-        .cornerRadius(LayoutConstants.cornerRadius5)
+            .padding(EdgeInsets(top: LayoutConstants.padding5,
+                                leading: LayoutConstants.padding10,
+                                bottom: LayoutConstants.padding5,
+                                trailing: LayoutConstants.padding10))
+            .background(ColorConstants.additionalBackground)
+            .cornerRadius(LayoutConstants.cornerRadius5)
     }
 
     private func viewHeightReader(_ binding: Binding<CGFloat>) -> some View {
@@ -81,6 +79,6 @@ struct TagView: View {
 struct TrueTagView: View {
     var tags: [String]
     var body: some View {
-            TagView(tags: tags)
+        TagView(tags: tags)
     }
 }

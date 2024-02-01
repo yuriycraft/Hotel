@@ -68,9 +68,8 @@ public struct APIClient {
                                                    response: URLResponse?,
                                                    error: Error?,
                                                    completion: @escaping (Result<T, NetworkError>) -> Void) {
-        if let error = error {
+        if error != nil {
             completion(.failure(.urlError))
-            print("Network Error: \(error)")
             return
         }
 
@@ -80,7 +79,9 @@ public struct APIClient {
         }
 
         do {
-            let decodedResponse = try JSONDecoder().decode(T.self, from: data)
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            let decodedResponse = try decoder.decode(T.self, from: data)
             completion(.success(decodedResponse))
         } catch {
             completion(.failure(.parseDataError("Failed to decode data")))
@@ -104,7 +105,6 @@ public struct APIClient {
         }
         
         imageCache.setObject(data as NSData, forKey: urlString as NSString)
-
         completion(.success(data))
     }
 }

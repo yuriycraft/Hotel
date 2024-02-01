@@ -24,20 +24,23 @@ final class HotelFlowCoordinator: ObservableObject, Hashable {
     private var id: UUID
     private var cancellables = Set<AnyCancellable>()
     private var previousTitle: String?
-    
+    private lazy var hotelViewModel = HotelViewModel()
+    private lazy var roomsViewModel = RoomsViewModel()
+    private lazy var reservationViewModel = ReservationViewModel()
+    private lazy var orderViewModel = OrderViewModel()
     let pushCoordinator = PassthroughSubject<HotelFlowCoordinator?, Never>()
-    
+
     fileprivate init(page: HotelPage, title: String?) {
         id = UUID()
         self.page = page
-        self.previousTitle = title
+        previousTitle = title
     }
-    
+
     init(page: HotelPage) {
         id = UUID()
         self.page = page
     }
-    
+
     @ViewBuilder
     func build() -> some View {
         switch page {
@@ -59,48 +62,43 @@ final class HotelFlowCoordinator: ObservableObject, Hashable {
                 .navigationBarTitleDisplayMode(.inline)
         }
     }
-    
+
     // MARK: Required methods for class to conform to Hashable
 
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }
-    
+
     static func == (lhs: HotelFlowCoordinator, rhs: HotelFlowCoordinator) -> Bool {
         return lhs.id == rhs.id
     }
-    
+
     // MARK: View Creation Methods
 
     private func hotelView() -> some View {
-        let viewModel = HotelViewModel()
-        let hotelView = HotelView(viewModel: viewModel)
+        let hotelView = HotelView(viewModel: hotelViewModel)
         bind(view: hotelView)
-           
         return hotelView
     }
-    
+
     private func roomsView() -> some View {
-        let viewModel = RoomsViewModel()
-        let roomsView = RoomsView(viewModel: viewModel)
+        let roomsView = RoomsView(viewModel: roomsViewModel)
         bind(view: roomsView)
         return roomsView
     }
-    
+
     private func reservationView() -> some View {
-        let viewModel = ReservationViewModel()
-        let reservationView = ReservationView(reservationVM: viewModel)
+        let reservationView = ReservationView(viewModel: reservationViewModel)
         bind(view: reservationView)
         return reservationView
     }
-    
+
     private func orderView() -> some View {
-        let viewModel = OrderViewModel()
-        let orderView = OrderView(viewModel: viewModel)
+        let orderView = OrderView(viewModel: orderViewModel)
         bind(view: orderView)
         return orderView
     }
-    
+
     // MARK: View Bindings
 
     private func bind(view: HotelView) {
@@ -112,7 +110,7 @@ final class HotelFlowCoordinator: ObservableObject, Hashable {
             })
             .store(in: &cancellables)
     }
-    
+
     private func bind(view: RoomsView) {
         view.didClickRoomItem
             .receive(on: DispatchQueue.main)
@@ -121,7 +119,7 @@ final class HotelFlowCoordinator: ObservableObject, Hashable {
             })
             .store(in: &cancellables)
     }
-    
+
     private func bind(view: ReservationView) {
         view.didClickReservationItem
             .receive(on: DispatchQueue.main)
@@ -130,7 +128,7 @@ final class HotelFlowCoordinator: ObservableObject, Hashable {
             })
             .store(in: &cancellables)
     }
-    
+
     private func bind(view: OrderView) {
         view.didClickOrderItem
             .receive(on: DispatchQueue.main)
@@ -147,14 +145,15 @@ extension HotelFlowCoordinator {
     private func showRooms() {
         pushCoordinator.send(HotelFlowCoordinator(page: .rooms, title: previousTitle ?? nil))
     }
-    
+
     private func showReservation() {
         pushCoordinator.send(HotelFlowCoordinator(page: .reservation))
     }
-    
+
     private func showOrder() {
         pushCoordinator.send(HotelFlowCoordinator(page: .order))
     }
+
     private func popToRoot() {
         pushCoordinator.send(nil)
     }

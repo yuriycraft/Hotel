@@ -12,32 +12,39 @@ final class AppCoordinator: ObservableObject {
     @Published var path: NavigationPath
     private var cancellables = Set<AnyCancellable>()
     var rootCoordinator: HotelFlowCoordinator?
-    
+
     init(path: NavigationPath) {
         self.path = path
     }
-    
+
     @ViewBuilder
     func build() -> some View {
         start()
     }
-    
+
     private func start() -> some View {
-        rootCoordinator = HotelFlowCoordinator(page: .hotel)
-        bind(hotelCoordinator: rootCoordinator!)
-        let view = rootCoordinator!.build()
-        return view
+        if let existingCoordinator = rootCoordinator {
+            return existingCoordinator.build()
+        } else {
+            let newCoordinator = HotelFlowCoordinator(page: .hotel)
+            rootCoordinator = newCoordinator
+            bind(hotelCoordinator: newCoordinator)
+            return newCoordinator.build()
+        }
     }
-    
+
     private func push<T: Hashable>(_ coordinator: T?) {
         if let coordinator = coordinator {
             path.append(coordinator)
         }
     }
-    
+
     private func popToRoot() {
         path.removeLast(path.count)
-        self.cancellables.removeAll()
+        cancellables.removeAll()
+        if let existingCoordinator = rootCoordinator {
+            bind(hotelCoordinator: existingCoordinator)
+        }
     }
 
     // MARK: Flow Coordinator Bindings
@@ -48,7 +55,7 @@ final class AppCoordinator: ObservableObject {
             .sink(receiveValue: { [weak self] coordinator in
                 guard let coordinator = coordinator else {
                     self?.popToRoot()
-                return
+                    return
                 }
                 self?.bind(hotelCoordinator: coordinator)
                 self?.push(coordinator)

@@ -22,14 +22,10 @@ final class RoomsViewModel: ObservableObject {
         var description: String
         var buttonText: String
     }
-    
-    init() {
-        loadDataFromNetwork()
-    }
 
     // MARK: - Load from Network
 
-    private func loadDataFromNetwork() {
+     func loadDataFromNetwork() {
         APIClient
             .fetch(urlString: NetworkConstants.roomsUrlString) { (result: Result<Rooms, NetworkError>) in
             switch result {

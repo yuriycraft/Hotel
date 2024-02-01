@@ -33,7 +33,7 @@ struct NextButtonStyle: ButtonStyle {
             .frame(height: NextButtonConstants.buttonHeight)
             .foregroundColor(.white)
             .background(ColorConstants.accentColor)
-            .cornerRadius(15)
+            .cornerRadius(LayoutConstants.cornerRadius15)
             .scaleEffect(configuration.isPressed ? 0.98 : 1.0)
     }
 }
@@ -41,7 +41,7 @@ struct NextButtonStyle: ButtonStyle {
 struct CustomButton: View {
     var text: String = ""
     var action: () -> Void
-    
+
     init(text: String, action: @escaping () -> Void) {
         self.text = text
         self.action = action

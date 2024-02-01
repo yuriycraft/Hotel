@@ -133,7 +133,7 @@
         },
         "ru" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Эти данные никому не передаются. После оплаты мы вышли чек на указанный вами номер и почту"
           }
         }
@@ -730,17 +730,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Что не включено"
-          }
-        }
-      }
-    },
-    "Ваш заказ принят в работу" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Your order has been accepted and is in progress."
           }
         }
       }

@@ -9,20 +9,15 @@ import Foundation
 import SwiftUI
 
 final class HotelViewModel: ObservableObject {
-
     @Published var hotel: Hotel? {
         didSet {
             objectWillChange.send()
         }
     }
-    
-    init() {
-        loadDataFromNetwork()
-    }
-    
+
     // MARK: - Load from Network
 
-     func loadDataFromNetwork() {
+    func loadDataFromNetwork() {
         APIClient.fetch(urlString: NetworkConstants.hotelUrlString) { (result: Result<Hotel, NetworkError>) in
             switch result {
             case .success(let hotelModel):
@@ -34,40 +29,41 @@ final class HotelViewModel: ObservableObject {
             }
         }
     }
-    
+
     var hotelAddress: String {
-        guard let address = hotel?.address else { return "" }
+        guard let address = hotel?.adress else { return "" }
         return address
     }
-    
+
     var hotelName: String {
         guard let name = hotel?.name else { return "" }
         return name
     }
-    
+
     var priceForIt: String {
         guard let priceForIt = hotel?.priceForIt else { return "" }
         return priceForIt.lowercased()
     }
+
     var formattedRating: String {
         guard let ratingName = hotel?.ratingName, let rating = hotel?.rating else { return "" }
         return "\(rating) \(ratingName)"
     }
-    
+
     var formattedPrice: String {
         guard let minimalPrice = hotel?.minimalPrice
         else { return "" }
         return "от \(String.formattedNumber(minimalPrice)) ₽"
     }
-    
+
     var aboutHotelDescription: String {
         return hotel?.aboutTheHotel?.description ?? ""
     }
-    
+
     var imageUrls: [String] {
         return hotel?.imageUrls ?? []
     }
-    
+
     var aboutHotelTitle: String {
         return StringConstants.aboutHotel
     }

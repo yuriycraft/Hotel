@@ -28,8 +28,9 @@ final class ImageViewModel: ObservableObject {
             case .success(let imageData):
                 if let loadedImage = UIImage(data: imageData) {
                     DispatchQueue.main.async {
-                    //    self?.imageCache.setObject(loadedImage, forKey: urlString as NSString)
-                        self?.image = loadedImage
+                        autoreleasepool {
+                            self?.image = loadedImage
+                        }
                     }
                 } else {
                     DispatchQueue.main.async {
