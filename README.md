@@ -1,6 +1,6 @@
 # Прототип мобильного приложения для туристического бронирования
 
-<img src="https://github.com/yuriycraft/Hotel/blob/main/Simulator%20Screen%20Recording%20-%20iPhone%2015%20Pro%20-%202024-01-30%20at%2015.36.15.gif" alt="Превью приложения" height="480" width="240" /> <img src="https://github.com/yuriycraft/Hotel/blob/main/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-01-30%20at%2015.19.33.png" alt="Превью приложения" height="480" width="240"/> <img src="https://github.com/yuriycraft/Hotel/blob/main/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-01-30%20at%2015.19.41.png" alt="Превью приложения" height="480" width="240" /> <img src="https://github.com/yuriycraft/Hotel/blob/main/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-01-30%20at%2015.19.51.png" alt="Превью приложения" height="480" width="240" />
+<img src="https://github.com/yuriycraft/Hotel/blob/8f55e010241353a6e2212ba842f6c4e0486ce1bc/Simulator%20Screen%20Recording.mp4" alt="Превью приложения" height="480" width="240" /> <img src="https://github.com/yuriycraft/Hotel/blob/main/Simulator%20Screenshot1.png" alt="Превью приложения" height="480" width="240"/> <img src="https://github.com/yuriycraft/Hotel/blob/8f55e010241353a6e2212ba842f6c4e0486ce1bc/Simulator%20Screenshot2.png" alt="Превью приложения" height="480" width="240" /> <img src="https://github.com/yuriycraft/Hotel/blob/main/Simulator%20Screenshot3.png" height="480" width="240" />
 
 ## Структура приложения
 
