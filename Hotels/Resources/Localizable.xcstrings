@@ -10,7 +10,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "About Hotel"
+            "value" : "Об отеле"
           }
         },
         "ru" : {
@@ -27,7 +27,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Add Tourist"
+            "value" : "Добавить туриста"
           }
         },
         "ru" : {
@@ -44,7 +44,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Amenities"
+            "value" : "Удобства"
           }
         },
         "ru" : {
@@ -61,7 +61,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Country, City"
+            "value" : "Страна, город"
           }
         },
         "ru" : {
@@ -78,7 +78,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Birth Date"
+            "value" : "Дата рождения"
           }
         },
         "ru" : {
@@ -95,7 +95,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Booking"
+            "value" : "Бронирование"
           }
         },
         "ru" : {
@@ -112,7 +112,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Citizenship"
+            "value" : "Гражданство"
           }
         },
         "ru" : {
@@ -128,7 +128,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "These data are not transmitted to anyone. After payment, we will send a receipt to the number and email you specified."
+            "value" : "Эти данные никому не передаются. После оплаты мы вышли чек на указанный вами номер и почту"
           }
         },
         "ru" : {
@@ -145,7 +145,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "\"Order confirmation №%@ may take some time (from 1 hour to 24 hours). Once we receive a response from the tour operator, you will receive a notification by email.\""
+            "value" : "\"Подтверждение заказа №%@ может занять некоторое время (от 1 часа до суток). Как только мы получим ответ от туроператора, вам на почту придет уведомление.\""
           }
         },
         "ru" : {
@@ -162,7 +162,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Departure from"
+            "value" : "Вылет из"
           }
         },
         "ru" : {
@@ -179,7 +179,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Email"
+            "value" : "Почта"
           }
         },
         "ru" : {
@@ -196,7 +196,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fifth Tourist"
+            "value" : "Пятый турист"
           }
         },
         "ru" : {
@@ -213,7 +213,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "First Tourist"
+            "value" : "Первый турист"
           }
         },
         "ru" : {
@@ -230,7 +230,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "First Name"
+            "value" : "Имя"
           }
         },
         "ru" : {
@@ -247,7 +247,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fourth Tourist"
+            "value" : "Четвертый турист"
           }
         },
         "ru" : {
@@ -264,7 +264,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fuel Charge"
+            "value" : "Топливный сбор"
           }
         },
         "ru" : {
@@ -281,7 +281,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Go to Select Room"
+            "value" : "К выбору номера"
           }
         },
         "ru" : {
@@ -298,7 +298,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hotel"
+            "value" : "Отель"
           }
         },
         "ru" : {
@@ -315,7 +315,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Image Loading Error"
+            "value" : "Ошибка загрузки фотографии"
           }
         },
         "ru" : {
@@ -332,7 +332,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Last Name"
+            "value" : "Фамилия"
           }
         },
         "ru" : {
@@ -349,7 +349,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Most Necessary"
+            "value" : "Самое необходимое"
           }
         },
         "ru" : {
@@ -366,7 +366,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "nights"
+            "value" : "ночей"
           }
         },
         "ru" : {
@@ -383,7 +383,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Number of Nights"
+            "value" : "Кол-во ночей"
           }
         },
         "ru" : {
@@ -400,7 +400,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nutrition"
+            "value" : "Питание"
           }
         },
         "ru" : {
@@ -417,7 +417,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Your order is being processed"
+            "value" : "Ваш заказ принят в работу"
           }
         },
         "ru" : {
@@ -434,7 +434,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Order paid"
+            "value" : "Заказ оплачен"
           }
         },
         "ru" : {
@@ -451,7 +451,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Passport Expiration Date"
+            "value" : "Срок действия загранпаспорта"
           }
         },
         "ru" : {
@@ -468,7 +468,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Passport Number"
+            "value" : "Номер загранпаспорта"
           }
         },
         "ru" : {
@@ -485,7 +485,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pay"
+            "value" : "Оплатить"
           }
         },
         "ru" : {
@@ -502,7 +502,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Phone Number"
+            "value" : "Номер телефона"
           }
         },
         "ru" : {
@@ -519,7 +519,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Room"
+            "value" : "Номер"
           }
         },
         "ru" : {
@@ -553,7 +553,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Second Tourist"
+            "value" : "Второй турист"
           }
         },
         "ru" : {
@@ -570,7 +570,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Select Room"
+            "value" : "Выбрать номер"
           }
         },
         "ru" : {
@@ -587,7 +587,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Service Charge"
+            "value" : "Сервисный сбор"
           }
         },
         "ru" : {
@@ -604,7 +604,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sixth Tourist"
+            "value" : "Шестой турист"
           }
         },
         "ru" : {
@@ -621,7 +621,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Super!"
+            "value" : "Супер!"
           }
         },
         "ru" : {
@@ -638,7 +638,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Third Tourist"
+            "value" : "Третий турист"
           }
         },
         "ru" : {
@@ -655,7 +655,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Total Price"
+            "value" : "К оплате"
           }
         },
         "ru" : {
@@ -672,7 +672,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tour"
+            "value" : "Тур"
           }
         },
         "ru" : {
@@ -689,7 +689,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tour Dates"
+            "value" : "Даты"
           }
         },
         "ru" : {
@@ -706,7 +706,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "What's Included"
+            "value" : "Что включено"
           }
         },
         "ru" : {
@@ -723,7 +723,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "What's Not Included"
+            "value" : "Что не включено"
           }
         },
         "ru" : {
