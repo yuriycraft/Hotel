@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HotelHeaderView: View {
     @ObservedObject var viewModel: HotelViewModel
-    
+
     var body: some View {
         ZStack {
             CustomBottomRoundedSpacer()
@@ -17,7 +17,7 @@ struct HotelHeaderView: View {
             VStack(alignment: .leading) {
                 PageView(urlArray: viewModel.imageUrls)
                     .frame(maxWidth: .infinity, minHeight: 257, maxHeight: 257)
-                    .cornerRadius(LayoutConstants.cornerRadius15)
+                   
                 
                 RatingView(rating: viewModel.formattedRating,
                            title: viewModel.hotelName,

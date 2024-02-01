@@ -25,7 +25,8 @@ struct CellView: View {
          price: String,
          description: String,
          buttonText: String,
-         didClickButtonItem: @escaping () -> Void) {
+         didClickButtonItem: @escaping () -> Void)
+    {
         self.detalsButtonText = text
         self.imageURLs = imageURLs
         self.hotelDescription = hotelDescription
@@ -106,7 +107,11 @@ struct RoomsView: View {
                     }
                 }
             }
-        }.listStyle(.grouped)
-            .environment(\.defaultMinListHeaderHeight, 0.1)
+        }
+        .onAppear {
+            viewModel.loadDataFromNetwork()
+        }
+        .listStyle(.grouped)
+        .environment(\.defaultMinListHeaderHeight, 0.1)
     }
 }
