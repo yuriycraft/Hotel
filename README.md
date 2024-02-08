@@ -2,6 +2,7 @@
 
 <img src="https://github.com/yuriycraft/Hotel/blob/f9ab668416de92dc56254b5991a44b9f552cb7ac/Simulator%20Screen%20Recording.gif" alt="Превью приложения" height="480" width="240" /> <img src="https://github.com/yuriycraft/Hotel/blob/main/Simulator%20Screenshot1.png" alt="Превью приложения" height="480" width="240"/> <img src="https://github.com/yuriycraft/Hotel/blob/8f55e010241353a6e2212ba842f6c4e0486ce1bc/Simulator%20Screenshot2.png" alt="Превью приложения" height="480" width="240" /> <img src="https://github.com/yuriycraft/Hotel/blob/main/Simulator%20Screenshot3.png" height="480" width="240" />
 
+
 ## Структура приложения
 
 - **HotelScreen:** Экран, отображающий информацию о выбранном отеле. Включает в себя карусель фотографий, основные и подробные данные об отеле, а также кнопку выбора номера.
